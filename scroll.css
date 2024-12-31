@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box; /*if we add border or padding, it doesn't affect the width of it. */
+}
+
+body {
+    background-color: #ededed;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow-x: hidden;
+    /* background-image: url(Images/Shiv1.jpg);
+    background-repeat: no-repeat;
+    background-size: 400px auto;
+    background-position: center top;
+    z-index: -1; */
+}
+
+h1 {
+    margin: 0px;
+    padding: 20px;
+    color: rgb(73, 57, 243);
+    position: fixed;
+    top: 0px;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+    background-color: rgb(250, 241, 209);
+}
+
+main {
+    margin-top: 10px;
+    z-index: 1;
+}
+
+img {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    padding-top: 130px;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+}
+
+.quote {
+    color: #000;
+    margin-top: 80px;
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: auto;
+    border-radius: 7px;
+    box-shadow: 2px 2px 10px 1px rgba(6, 107, 249, 0.7);
+    position: relative;
+    top: 80px;
+    background-image: linear-gradient(transparent, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), transparent);
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
+    text-align: center;
+    z-index: 10;
+}
+
+.quote p {
+    font-size: 20px;
+    line-height: 1.5rem;
+}
+
+.quote:nth-of-type(even) {
+    transform: translateX(-400%);
+}
+
+.quote.show {
+    transform: translateX(0);
+}
